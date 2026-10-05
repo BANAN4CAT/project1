@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Member Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <h1>Online Member User ID Registration</h1>
+        <p>Please put the following information</p>
+    </div>
+
+    <form id="registrationForm">
+
+        <h3>Account Information</h3>
+
+        <div class="form-group">
+            <label>* CRN / SS Number</label>
+            <input type="text" id="ssn" required>
+        </div>
+
+        <div class="form-group">
+            <label>* Email Address</label>
+            <input type="email" id="email" required>
+        </div>
+
+        <div class="form-group">
+            <label>* Confirm Email Address</label>
+            <input type="email" id="confirmEmail" required>
+        </div>
+
+        <div class="info">
+            User ID must be 8–20 characters. First character must be a letter.
+            Only letters, numbers, and underscore are allowed.
+        </div>
+
+        <div class="form-group">
+            <label>* Preferred User ID</label>
+            <input type="text" id="userId" maxlength="20" required>
+        </div>
+
+        <div class="form-group">
+            <label>* Confirm User ID</label>
+            <input type="text" id="confirmUserId" maxlength="20" required>
+        </div>
+
+        <h3>Personal Information</h3>
+
+        <div class="form-group">
+            <label>* Surname / Last Name</label>
+            <input type="text" id="lastName" required>
+        </div>
+
+        <div class="form-group">
+            <label>* Given Name</label>
+            <input type="text" id="firstName" required>
+        </div>
+
+        <div class="form-group">
+            <label>* Middle Name</label>
+            <input type="text" id="middleName">
+        </div>
+
+        <div class="form-group">
+            <label>* Date of Birth</label>
+            <input type="date" id="birthDate" required>
+        </div>
+
+        <h3>Mailing Address</h3>
+
+        <div class="form-group">
+            <label>Room / Floor / Unit No. & Building Name</label>
+            <input type="text" id="room">
+        </div>
+
+        <div class="form-group">
+            <label>House / Lot & Block No.</label>
+            <input type="text" id="house">
+        </div>
+
+        <div class="form-group">
+            <label>Street</label>
+            <input type="text" id="street">
+        </div>
+
+        <div class="form-group">
+            <label>Subdivision</label>
+            <input type="text" id="subdivision">
+        </div>
+
+        <div class="location">
+            <label>
+                <input type="radio" name="location" value="Metro Manila" required>
+                Metro Manila
+            </label>
+
+            <label>
+                <input type="radio" name="location" value="Province">
+                Province
+            </label>
+        </div>
+
+        <button type="submit">Submit Registration</button>
+
+    </form>
+
+</div>
+
+<div id="notification" class="notification">
+    <div class="notification-icon">✓</div>
+
+    <div>
+        <strong>Registration Successful!</strong>
+        <p>Your information has been submitted successfully.</p>
+    </div>
+
+    <button class="close-btn" onclick="closeNotification()">×</button>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
